@@ -47,3 +47,12 @@ type Identifer struct {
 func (i *Identifer) expressionNode() {}
 
 func (i *Identifer) TokenLiteral() string { return i.Token.Literal }
+
+type ReturnStatement struct {
+	Token       token.Token
+	ReturnValue Expression
+}
+
+func (i *ReturnStatement) statementNode() {}
+
+func (i *ReturnStatement) TokenLiteral() string { return i.Token.Literal }
